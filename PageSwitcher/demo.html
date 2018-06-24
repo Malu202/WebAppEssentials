@@ -14,28 +14,23 @@
 <body>
     <button class="page1" onclick="switchToPage1()">Page 1</button>
     <button class="page2" onclick="switchToPage2()">Page 2</button>
-    <div class="contentpage page1">
-        Page 1
-    </div>
-
-    <div class="contentpage page2">
-        Page 2
-    </div>
+    <div class="contentpage page1">Page 1</div>
+    <div class="contentpage page2">Page 2</div>
 </body>
 
 <script type="text/javascript" src="pageSwitcher.js"></script>
 <script>
 
     var pageSwitcher = new PageSwitcher;
-    pageSwitcher.enterException = function(pageElement){
-        if(pageElement.tagName.toLowerCase() == "button"){
+    pageSwitcher.enterException = function (pageElement) {
+        if (pageElement.tagName.toLowerCase() == "button") {
             pageElement.style.background = "#00FF00";
             return true;
         }
         return false;
     }
-    pageSwitcher.exitException = function(pageElement){
-        if(pageElement.tagName.toLowerCase() == "button"){
+    pageSwitcher.exitException = function (pageElement) {
+        if (pageElement.tagName.toLowerCase() == "button") {
             pageElement.style.background = "#FF0000";
             return true;
         }

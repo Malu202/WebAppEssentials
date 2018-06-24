@@ -21,10 +21,17 @@ PageSwitcher.prototype.switchToPage = function (pageName) {
         }
     }
     this.previousPageName = pageName;
+
+    this.onPageSwitch(previousPageName == null);
 }
 PageSwitcher.prototype.enterException = function (pageElement) {
     return false;
 }
 PageSwitcher.prototype.exitException = function (pageElement) {
     return false;
+}
+
+
+PageSwitcher.prototype.onPageSwitch = function (initial){
+
 }
