@@ -22,7 +22,7 @@ PageSwitcher.prototype.switchToPage = function (pageName) {
     }
     this.previousPageName = pageName;
 
-    this.onPageSwitch(previousPageName == null);
+    this.onPageSwitch(this.previousPageName == null);
 }
 PageSwitcher.prototype.enterException = function (pageElement) {
     return false;
